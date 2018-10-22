@@ -11,13 +11,10 @@ h2 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 35px;
   padding-top: 10rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
   text-align: center;
 }
 
-.col-md-3 {
-  background-color: #DFDCE3
-}
 /*
  * Base structure
  */
@@ -27,72 +24,141 @@ body {
   background-color: #ffffff;
 }
 body {
-  padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #465C8B;
-  text-align: center;
+  color: #ECECEC;
+  background-color: #ECECEC;
+
 }
 /*
- *	 Spacing
+ *   Spacing
  */
 .space-bottom {
   padding-bottom: 5rem;
 }
-
-
-.sidewaysSpace {
 .space {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 .container {
-  max-width: 500px;
+  width: 500px;
   margin: auto;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: transparent;
+  justify-content: center;
+  margin: 20px;
+  margin-top: 35px;
+}
+
+.card {
+  height: 350px;
+  width: 300px;
+  border: 1px solid #ccc;
+  background-color: #93C178;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+
+  transition: box-shadow .3s ease;
+}
+.card:hover {
+  /* border: 1px solid #777; */
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-img {
+  height: 200px;
+  width: 200px;
+  margin-bottom: 12px;
+  float: top;
+  object-fit: cover;
+}
+
+.responsive {
+  /* padding: 0 6px;
+  float: left;
+  width: 24.99999%; */
+  padding: 30px;
+}
+
+/* @media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+} */
+
+/* .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+
+/*.sidewaysSpace {
+  padding-right: 3rem;
+  padding-left: 3rem;
+}*/
+
 .btn-outline-primary {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 70px;
+  padding-right: 70px;
   text-align: center;
   color: #465C8B;
   background-color:transparent;
   background-image:none;
   border-color: #465C8B;
+  font-size: 17px;
 }
 .btn-outline-primary:hover {
   color: #fff;
   background-color: #465C8B;
   border-color: #465C8B;
+  box-shadow: 0 4px px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-outline-secondary {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 70px;
+  padding-right: 70px;
   text-align: center;
-  color: #712c69;
+  color: #225e9e;
   background-color:transparent;
   background-image:none;
-  border-color: #712c69;
+  border-color: #225e9e;
+  font-size: 17px;
 }
 .btn-outline-secondary:hover {
   color: #fff;
-  background-color: #712c69;
-  border-color: #712c69;
+  background-image: linear-gradient(to right, #465C8B 0%, #712c69 100%);
+  border-color: #225e9e;
+  box-shadow: 0 4px px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-outline-tertiary {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 70px;
+  padding-right: 70px;
   text-align: center;
   color: #712c69;
   background-color:transparent;
   background-image:none;
   border-color: #712c69;
+  font-size: 17px;
 }
 .btn-outline-tertiary:hover {
   color: #fff;
   background-color: #712c69;
   border-color: #712c69;
+  box-shadow: 0 4px px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 /*
  * Header Navigation Setup
@@ -104,48 +170,12 @@ body {
   align-content: center;
   font-weight: 400;
   color: #161616;
-  background-color: white;
+  background-color: #ECECEC;
   border-bottom: 0.25rem solid transparent;
 }
 .nav-link + .nav-link {
   margin-left: 1rem;
 }
-/* profile*/
-/* Profile Sidebar Setup */
-.profile {
-  padding: 20px 0 40px 0;
-  margin: 30px 0;
-  color: #ECECEC;
-  text-align: center;
-}
-
-/* Profile sidebar */
-.profile-sidebar {
-  padding: 40px 0 40px 0;
-  background: #F78888;;
-}
-.personal-info-rows {
-  font-size: 15px;
-  color: #5DA2D5;
-  text-align: left;
-}
-
-.name {
-  color: #000;
-}
-.profile-userpic img {
-  float: none;
-  margin: 0 auto;
-  width: 50%;
-  height: 50%;
-}
-
-.profileRow {
-  padding: 5rem;
-  /*border: 1px solid rgb(243,210,80);*/
-  background-color: rgb(243,210,80);
-}
-
 /* Extra pretty stuff*/
 .magical--underline {
   background-image: linear-gradient(45deg, #225e9e 0%, #712c69 100%);
@@ -162,11 +192,18 @@ body {
 }
 
 #wrapper {
-  background-color: transparent;/* for visualization purposes */
   text-align: center;
 }
 #buttons {
-  background-color: transparent; /* for visualization purposes */
   display: inline-block;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: white;
+  text-align: center;
+}
